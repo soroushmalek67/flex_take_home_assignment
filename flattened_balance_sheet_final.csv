@@ -1,4 +1,4 @@
-Category,Parent Name,Name,Account ID,Value,Is_Lowest_Level
+category,parent_name,name,account_id,value,is_lowest_level
 ASSETS,,ASSETS,,13318970.87,False
 ASSETS,ASSETS,Current Assets,,13300233.24,False
 ASSETS,Current Assets,Bank Accounts,,-513160.89,False
