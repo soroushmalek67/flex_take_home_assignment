@@ -20,12 +20,13 @@ def flatten_json(data):
             is_lowest_level = not item.get("items", [])
 
             flattened_data.append({
-                "Category": parent_category,
-                "Parent Name": current_parent,
-                "Name": name,
-                "Account ID": account_id,
-                "Value": value,
-                "Is_Lowest_Level": is_lowest_level  
+                "category": parent_category,
+                "parent_name": current_parent,
+                "name": name,
+                "account_id": account_id,
+                "value": value,
+                ## adding this to be aware of the lowest level of data
+                "is_lowest_level": is_lowest_level
             })
             
             # Recursively process sub-items
@@ -39,12 +40,12 @@ def flatten_json(data):
             
             # Add the root category entry
             flattened_data.append({
-                "Category": category_name,
-                "Parent Name": None,
-                "Name": category_name,
-                "Account ID": None,
-                "Value": total_value,
-                "Is_Lowest_Level": False  
+                "category": category_name,
+                "parent_name": None,
+                "name": category_name,
+                "account_id": None,
+                "value": total_value,
+                "is_lowest_level": False 
             })
 
             # Process sub-items dynamically
