@@ -4,6 +4,9 @@ How to run the codes:
 3. Create the model and the test for the first-level data. 
 4. Create the model and the test for the second-level data.
 5. Create the model and the test for the lowest-level data.
+Note that numbers 3, 4 and 5 should be run and test using dbt. 
+There is a discrepancy for Current Liabilities, as well as a record with missing account_id.
+
 
 Here is an ERD diagram for the data: 
 ![Screenshot 2025-02-18 at 5 02 07 PM](https://github.com/user-attachments/assets/51229d8e-b101-447d-b3e8-f5c26a744568)
@@ -60,6 +63,29 @@ However, in a real-world scenario, some form of timestamping would be necessary 
 
 ## If I had more time
 
-If I had more time, I would improve validation checks to catch missing data and hierarchy inconsistencies earlier. 
-I would also optimize the script for larger datasets, enhance dbt tests to identify more discrepancies, and integrate the process into a data warehouse like Snowflake or Redshift for better scalability.
+If I had more time, I would focus on making the entire process more flexible, scalable, and automated. Instead of relying on a static Python script for flattening, I would explore using AWS Lambda and Glue to handle the transformation dynamically. 
+This would allow us to automate schema evolution, maintain metadata, and integrate a proper data catalog. I would also consider storing the data in a data lake or lakehouse setup to improve query performance, version control, and long-term storage.
+
+Another key area of improvement would be optimizing the script for larger datasets. The current implementation works well for the given data, but in real-world scenarios with millions of records, performance tuning would be necessary. 
+This could include parallel processing, better memory management, and leveraging optimized file formats like Parquet or Iceberg instead of CSV.
+
+On the dbt side, I would enhance testing and validation by introducing more granular tests for edge cases, ensuring that unexpected values, missing records, or incorrect aggregations are properly flagged. 
+I would also implement tests for handling precision mismatches, as even small rounding differences in financial data can lead to discrepancies in reporting. 
+
+To improve model organization and orchestration, I would ensure that dbt tags are used effectively for these models to group them correctly and by business function, expectations as well as data freshness or the required update frequency. 
+Like, whether they need to get updated, every hour, every day, etc.
+
+For materialization strategies, I would ensure that models are configured correctly based on the update frequency and data size. Again, here we can use dbt to do that job for us, whether we need table or incremental model or snapshot.
+This means using incremental models where full refreshes are unnecessary, snapshots for tracking historical changes, and ephemeral models where temporary transformations are needed for efficiency.
+
+Another key improvement would be applying best practices in data modeling, such as using a star schema to create unified dimension and fact models. 
+Instead of relying solely on the flattened balance sheet dataset, I would design separate fact and dimension tables to better organize financial data. 
+A fact table, for example, could store aggregated financial metrics, while dimension tables would hold metadata for accounts, categories, and reporting periods. 
+This would make it easier to join the balance sheet data with other datasets, such as revenue, expenses, or forecasts. 
+For records with an account_id, linking to an account dimension table would enrich the dataset with relevant details like account type, owner, or financial institution. 
+This structured approach would improve query performance, enhance data consistency, and simplify reporting, making financial insights more accessible and scalable. 
+
+Overall, with more time, I would focus on automation, scalability, and long-term usability to make this solution more robust and production-ready.
+
+
 
