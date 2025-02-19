@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: financial
+    schema: financial
+    loader: S3-Spectrum
+
+    tables:
+      - name: flattened_balance_sheet
+        description: "Flattened balance sheet data from JSON file"
+        columns:
+          - name: Category
+            description: "Top-level category (ASSETS, LIABILITIES, EQUITY)"
+          - name: Parent_Name
+            description: "The parent category of the current row"
+          - name: Name
+            description: "The name of the subcategory or account"
+          - name: Account_ID
+            description: "Unique identifier if it's an account-level record"
+          - name: Value
+            description: "The numeric value for that category/account"
+          - name: Is_Lowest_Level
+            description: "Boolean flag indicating whether this is a lowest-level record (no sub-items)"
