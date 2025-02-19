@@ -1,0 +1,38 @@
+Category,Parent Name,Name,Account ID,Value,Is_Lowest_Level
+ASSETS,,ASSETS,,13318970.87,False
+ASSETS,ASSETS,Current Assets,,13300233.24,False
+ASSETS,Current Assets,Bank Accounts,,-513160.89,False
+ASSETS,Bank Accounts,Flex Cash,6c9790a2-0800-46cc-8c50-e29e69d8015c,806291.61,True
+ASSETS,Bank Accounts,Flex Checking,b58e60f6-fe20-451e-9fc2-87eb58bcb297,-1272375.0,True
+ASSETS,Bank Accounts,Flex 2761,c7a7a89e-cc40-40b0-90dd-60f0dadedc41,-47077.5,True
+ASSETS,Current Assets,Accounts Receivable,,13788410.16,False
+ASSETS,Accounts Receivable,Accounts Receivable,bdd4df93-54ac-420c-8a9b-897a24f79c9c,13788410.16,True
+ASSETS,Current Assets,Other Current Assets,,24983.97,False
+ASSETS,Other Current Assets,Payments to Deposit,15560eaa-78c3-4ef6-bcc2-4697c9f509ef,10000.0,True
+ASSETS,Other Current Assets,Prepaid Expenses,1d09f6de-b8e5-4865-94e4-5a1f15e0ce04,14983.97,True
+ASSETS,ASSETS,Fixed Assets,,18737.63,False
+ASSETS,Fixed Assets,"Property, Plant, and Equipment",,18737.63,False
+ASSETS,"Property, Plant, and Equipment",Office Equipment,47c124b7-efcb-4225-95b8-7b85e2dcb977,14855.91,True
+ASSETS,"Property, Plant, and Equipment",Furniture,3073b7ee-8d38-48e8-b2cc-a422ffb2d20f,1017.08,True
+ASSETS,"Property, Plant, and Equipment",Computers and Accessories,6450bea2-bafc-40a5-9faa-0a069669f758,2864.64,True
+Liabilities,,Liabilities,,1025016.99,False
+Liabilities,Liabilities,Current Liabilities,,1014525.75,False
+Liabilities,Current Liabilities,Accounts Payable,,83086.72,False
+Liabilities,Accounts Payable,Accounts Payable,,83086.72,False
+Liabilities,Accounts Payable,Accrued Rent,09342b42-bfa9-459c-997b-f7dac52d32a6,69723.08,True
+Liabilities,Accounts Payable,Payable to Character,1cf73166-6064-4e55-875a-ede915e5f0cb,9313.64,True
+Liabilities,Accounts Payable,Accounts Payable,51818eb7-9561-4f26-8285-b391b90b3c21,4050.0,True
+Liabilities,Current Liabilities,Credit Cards,,854440.93,False
+Liabilities,Credit Cards,2004 Credit Card,,854440.93,False
+Liabilities,2004 Credit Card,Flex Bronze Card,420851e1-e6f4-4f2f-9a15-3634fa24bce0,5817.5,True
+Liabilities,2004 Credit Card,Flex Silver Card,1a6c59d8-ae89-4704-b6ec-721da2e6b7c0,797087.28,True
+Liabilities,2004 Credit Card,Flex Gold Card,6112362b-0dac-4172-a3da-5c89e4487768,76536.15,True
+Liabilities,2004 Credit Card,Flex Platinum Card,fc38e9a5-f2f5-45b0-8466-ecfc36d28561,-25000.0,True
+Liabilities,Liabilities,Long-Term Liabilities,,10491.24,False
+Liabilities,Long-Term Liabilities,Settle Loans Payable,220,10491.24,True
+Equity,,Equity,,12399101.55,False
+Equity,Equity,Owners Equity,,-95000.0,False
+Equity,Owners Equity,Owner's Equity,831b6852-6f82-4ce1-b07b-88601d16457d,-95000.0,True
+Equity,Equity,Retained Earnings,b1ba5fb3-5d54-4806-ad8d-e78bd2187e13,11881707.5,True
+Equity,Equity,Balance Adjustments,49862dbf-e470-479e-98ae-c1e172bd86a3,122453.09,True
+Equity,Equity,Net Income,,489940.96,True
