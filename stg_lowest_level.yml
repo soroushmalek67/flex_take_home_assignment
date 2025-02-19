@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_lowest_level
+    description: "Stage model for the lowest-level account records in the balance sheet."
+    columns:
+      - name: category
+        description: "Top-level category (ASSETS, LIABILITIES, EQUITY)."
+      - name: second_level_subcategory
+        description: "The second-level subcategory under its respective first-level subcategory."
+      - name: account_name
+        description: "The lowest-level account name."
+        tests:
+          - not_null
+      - name: account_id
+        description: "Unique identifier for the lowest-level account record."
+        tests:
+          - unique
+          - not_null 
+      - name: value
+        description: "The numeric value for the lowest-level account."
+        tests:
+          - not_null
