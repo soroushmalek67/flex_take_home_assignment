@@ -58,3 +58,8 @@ Another issue was the lack of timestamp fields, such as created_date or modified
 I could have added a timestamp to record when the data was ingested, but given the timeline, I decided not to. 
 However, in a real-world scenario, some form of timestamping would be necessary to ensure data freshness, track changes, and provide better visibility into when each record was created or reported.
 
+## If I had more time
+
+If I had more time, I would improve validation checks to catch missing data and hierarchy inconsistencies earlier. 
+I would also optimize the script for larger datasets, enhance dbt tests to identify more discrepancies, and integrate the process into a data warehouse like Snowflake or Redshift for better scalability.
+
