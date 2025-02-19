@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_first_layer
+    description: "Stage model for the first-level subcategories of the balance sheet."
+    columns:
+      - name: category
+        description: "Top-level category (ASSETS, LIABILITIES, EQUITY)."
+        tests:
+          - not_null
+      - name: subcategory
+        description: "The first-level subcategory under each main category."
+        tests:
+          - not_null
+      - name: unique_id
+        description: "A surrogate key generated from Category and Name to uniquely identify records."
+        tests:
+          - unique
+      - name: value
+        description: "The reported value for the first-level subcategory."
+        tests:
+          - not_null
+          - test_first_level_category_total
