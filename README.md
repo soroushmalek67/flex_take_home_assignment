@@ -1,7 +1,7 @@
 How to run the codes:
-1. Run the Python code, soroush_malek_flex_flattening_code.py, to flatten data. The CSV file that includes all the data will be created.
+1. Run the Python code, soroush_malek_flex_flattening_code.py, to flatten data. Then the CSV file that includes all the data will be created.
 2. Declare the source data in dbt.
-3. Create the model and the test for the first-level data.
+3. Create the model and the test for the first-level data. 
 4. Create the model and the test for the second-level data.
 5. Create the model and the test for the lowest-level data.
 
