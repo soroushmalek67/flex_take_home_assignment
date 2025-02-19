@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_first_layer
+  - name: stg_first_level
     description: "Stage model for the first-level subcategories of the balance sheet."
     columns:
       - name: category
