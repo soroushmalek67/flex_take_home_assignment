@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_second_level
+    description: "Stage model for the second-level subcategories of the balance sheet."
+    columns:
+      - name: category
+        description: "Top-level category (ASSETS, LIABILITIES, EQUITY)."
+        tests:
+          - not_null
+      - name: first_level_subcategory
+        description: "The first-level subcategory under each main category."
+        tests:
+          - not_null
+      - name: second_level_subcategory
+        description: "The second-level subcategory under its respective first-level subcategory."
+        tests:
+          - not_null
+      - name: unique_id
+        description: "A surrogate key generated from Category, First-Level Subcategory, and Name to uniquely identify records."
+        tests:
+          - unique
+      - name: value
+        description: "The reported value for the second-level subcategory."
+        tests:
+          - not_null
