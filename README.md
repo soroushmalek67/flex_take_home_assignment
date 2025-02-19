@@ -1,4 +1,16 @@
-This document explains my approach to the problem, the assumptions I made, the issues I found in the data, and what I would do if I had more time.
+How to run the codes:
+1. Run the Python code, soroush_malek_flex_flattening_code.py, to flatten data. The CSV file that includes all the data will be created.
+2. Declare the source data in dbt.
+3. Create the model and the test for the first-level data.
+4. Create the model and the test for the second-level data.
+5. Create the model and the test for the lowest-level data.
+
+Here is an ERD diagram for the data: 
+![Screenshot 2025-02-18 at 5 02 07 PM](https://github.com/user-attachments/assets/51229d8e-b101-447d-b3e8-f5c26a744568)
+Link to where I drew it: https://app.diagrams.net/#G1s5bcLiJoI82z2locSu7TLlna_wWPV9fd#%7B%22pageId%22%3A%22YCvazuojg-0Ej7p4dK_Y%22%7D 
+
+From now, this document explains my approach to the problem, the assumptions I made, the issues I found in the data, and what I would do if I had more time.
+
 Note: I completed this quickly and with some simple assumptions while ensuring correctness and efficiency.
 
 ## My Approach to the Problem
